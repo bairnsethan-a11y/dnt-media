@@ -189,6 +189,28 @@
   .creed{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
   .creed span{font-size:12px;border:1px solid var(--line);padding:8px 14px;border-radius:30px;color:#5d584f;background:var(--panel)}
 
+  /* NEW ORLEANS */
+  .nola{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-label .fleur,.nola .fleur{color:var(--gold)}
+  .nola-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:54px 0 10px}
+  .fact{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 24px;box-shadow:var(--shadow-sm);transition:.25s}
+  .fact:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--gold)}
+  .fact .fleur{font-size:22px;display:block;margin-bottom:10px;line-height:1}
+  .fact h4{font-family:'Anton';text-transform:uppercase;font-size:18px;margin-bottom:7px;color:var(--ink);letter-spacing:.5px}
+  .fact p{font-size:14px;color:var(--muted)}
+  .nola-sub{margin-top:74px}
+  .events{display:grid;gap:14px;margin-top:38px}
+  .event{display:grid;grid-template-columns:90px 1fr;gap:22px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 24px;box-shadow:var(--shadow-sm);transition:.25s}
+  .event:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-2px)}
+  .ev-date{background:#1a1a1a;border-radius:12px;text-align:center;padding:13px 6px;color:#fdfaf2}
+  .ev-date .m{display:block;font-family:'Anton';color:var(--gold-bright);font-size:15px;letter-spacing:2px}
+  .ev-date .d{display:block;font-family:'Anton';font-size:23px;line-height:1.05}
+  .ev-body h4{font-family:'Anton';text-transform:uppercase;font-size:19px;color:var(--ink);margin-bottom:4px;letter-spacing:.5px}
+  .ev-body p{font-size:14px;color:var(--muted);margin-bottom:7px}
+  .ev-meta{font-size:12.5px;color:var(--gold-dark);font-weight:600}
+  .nola-note{margin-top:24px;font-size:12.5px;color:var(--muted)}
+  .nola-note a{color:var(--gold-dark);font-weight:600;text-decoration:underline}
+
   /* CTA */
   .cta{text-align:center;padding:150px 0;background:linear-gradient(165deg,#1d1812,#100d09);position:relative;overflow:hidden}
   .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,rgba(212,175,55,.20),transparent 58%)}
@@ -229,7 +251,7 @@
     .nav-links{position:fixed;inset:72px 0 auto 0;background:var(--bg);flex-direction:column;padding:30px 26px;gap:22px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s;align-items:flex-start}
     .nav-links.open{transform:none}
     .nav-toggle{display:block}
-    .pillars,.who-grid,.why-list,.founders-in,.form-grid,.stats-grid{grid-template-columns:1fr}
+    .pillars,.who-grid,.why-list,.founders-in,.form-grid,.stats-grid,.nola-facts{grid-template-columns:1fr}
     .stats-grid{grid-template-columns:1fr 1fr;gap:34px}
     .est-card{grid-template-columns:1fr;padding:30px;gap:30px}
     .est-out{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:30px}
@@ -249,6 +271,7 @@
     <a href="#work" data-h>Work</a>
     <a href="#build" data-h>Build a Package</a>
     <a href="#founders" data-h>About</a>
+    <a href="#nola" data-h>NOLA</a>
     <a href="#contact" class="btn" data-h>Start your story</a>
   </div>
 </div></nav>
@@ -406,6 +429,62 @@
   </div></div>
 </div></section>
 
+<section class="sec nola" id="nola"><div class="wrap">
+  <div class="reveal">
+    <div class="sec-label"><span class="fleur">⚜&#xFE0E;</span> Made in New Orleans</div>
+    <h2>We don't just work here. We're from here.</h2>
+    <p class="lead">DnT is New Orleans to the core — the music, the food, the characters, the beautiful chaos. It's the best storytelling city on earth, and it's our home field. A little love letter to it:</p>
+  </div>
+
+  <div class="nola-facts">
+    <div class="fact reveal"><span class="fleur">⚜&#xFE0E;</span><h4>Jazz was born here</h4><p>On Sunday afternoons in Congo Square, enslaved Africans kept their rhythms alive. That gathering is where jazz — America's only original art form — began.</p></div>
+    <div class="fact reveal"><span class="fleur">⚜&#xFE0E;</span><h4>308 years deep</h4><p>Founded in 1718. We've had three centuries to perfect the art of a good time, a good meal, and a good story.</p></div>
+    <div class="fact reveal"><span class="fleur">⚜&#xFE0E;</span><h4>Oldest streetcar on earth</h4><p>The St. Charles line has been rolling since 1835 — the oldest continuously operating streetcar in the world.</p></div>
+    <div class="fact reveal"><span class="fleur">⚜&#xFE0E;</span><h4>Mardi Gras is the law</h4><p>It's an official Louisiana state holiday. The whole city shuts down to celebrate. Good luck explaining that anywhere else.</p></div>
+    <div class="fact reveal"><span class="fleur">⚜&#xFE0E;</span><h4>America's first cocktail</h4><p>The Sazerac was mixed up right here. We didn't just invent the drink — arguably, we invented the cocktail bar.</p></div>
+    <div class="fact reveal"><span class="fleur">⚜&#xFE0E;</span><h4>Cities of the dead</h4><p>Our cemeteries sit above ground — entire marble neighborhoods for the departed. Even our goodbyes have style.</p></div>
+  </div>
+
+  <div class="nola-sub reveal">
+    <div class="sec-label"><span class="fleur">⚜&#xFE0E;</span> What's happening in the city</div>
+    <h2>Upcoming in New Orleans.</h2>
+    <p class="lead">A running list of what's good around town — because we're not just a studio, we're locals. Come find us out there.</p>
+  </div>
+
+  <div class="events">
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">JUL</span><span class="d">3–5</span></div>
+      <div class="ev-body"><h4>ESSENCE Festival of Culture</h4><p>The country's biggest celebration of Black culture, music, and community — days at the Convention Center, headliner nights under the Dome.</p><div class="ev-meta">📍 Caesars Superdome · 1500 Sugar Bowl Dr · Days &amp; nights</div></div>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">JUL</span><span class="d">4</span></div>
+      <div class="ev-body"><h4>Go 4th on the River</h4><p>Dueling-barge fireworks lighting up the Mississippi. Free — and the best seat is anywhere along the levee.</p><div class="ev-meta">📍 Mississippi Riverfront · Fireworks ~9 PM · Free</div></div>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">JUL</span><span class="d">10–12</span></div>
+      <div class="ev-body"><h4>Running of the Bulls</h4><p>Pamplona, NOLA-style: the "bulls" are roller-derby skaters with plastic bats, and it all ends in a block party.</p><div class="ev-meta">📍 Downtown / Warehouse District · Morning run + party</div></div>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">JUL</span><span class="d">19–24</span></div>
+      <div class="ev-body"><h4>Tales of the Cocktail</h4><p>The world's premier cocktail festival — seminars, tastings, and the industry's best behind every bar in the city.</p><div class="ev-meta">📍 Downtown New Orleans · Daily</div></div>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">JUL</span><span class="d">24–26</span></div>
+      <div class="ev-body"><h4>X Games New Orleans</h4><p>Skate, BMX, and Moto X's biggest names throwing down under the Superdome roof.</p><div class="ev-meta">📍 Caesars Superdome · 1500 Sugar Bowl Dr · Fri–Sun</div></div>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">AUG</span><span class="d">1</span></div>
+      <div class="ev-body"><h4>White Linen Night</h4><p>Wear all white and walk the Warehouse District's galleries — art, live music, and street food for blocks.</p><div class="ev-meta">📍 Julia St (300–600 blocks) · ~6–9 PM · Free</div></div>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><span class="m">AUG</span><span class="d">1–2</span></div>
+      <div class="ev-body"><h4>Satchmo SummerFest</h4><p>A free two-day tribute to Louis Armstrong — brass bands, Louisiana food, and second lines at the Old U.S. Mint.</p><div class="ev-meta">📍 New Orleans Jazz Museum · 400 Esplanade Ave · 11 AM–7 PM · Free</div></div>
+    </div>
+  </div>
+
+  <p class="nola-note">Times are approximate — confirm on each festival's official site. This list auto-refreshes monthly · Last updated June 2026 · Full calendar at <a href="https://www.neworleans.com/events/" target="_blank" rel="noopener">neworleans.com/events</a>.</p>
+</div></section>
+
 <section class="sec cta"><div class="wrap reveal">
   <h2>Your story's worth<br>telling right<b class="gd">.</b></h2>
   <p>A quick call, no pressure. We'll tell you honestly whether we're the right fit.</p>
@@ -451,7 +530,7 @@
     <a href="#top" class="logo" data-h>D<span class="accent">n</span>T <span style="font-size:14px;color:var(--muted)">MEDIA</span></a>
     <div class="foot-links"><a href="#work" data-h>Work</a><a href="#build" data-h>Build</a><a href="#founders" data-h>About</a><a href="#contact" data-h>Contact</a></div>
   </div>
-  <p class="copyright">© 2026 DnT Media — "Dan n' Than." Stories worth remembering. · New Orleans, LA · @dntmedia</p>
+  <p class="copyright">© 2026 DnT Media — "Dan n' Than." Stories worth remembering. · <span style="color:var(--gold)">⚜&#xFE0E;</span> New Orleans, LA · @dntmedia</p>
 </div></footer>
 
 <script>
