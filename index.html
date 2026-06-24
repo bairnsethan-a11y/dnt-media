@@ -8,6 +8,11 @@
 <meta property="og:title" content="DnT Media — Stories Worth Remembering">
 <meta property="og:description" content="A two-person New Orleans studio making content & brand films people actually remember.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://bairnsethan-a11y.github.io/dnt-media/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DnT Media — Stories Worth Remembering">
+<meta name="twitter:description" content="A two-person New Orleans studio making content & brand films people actually remember.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a1a'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='19' font-weight='800' fill='%23bf9b30' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,7 +25,7 @@
     --muted:#6b6b6b;        /* warm gray secondary text */
     --gold:#bf9b30;         /* rich antique gold — primary accent / buttons */
     --gold-bright:#d4af37;  /* brighter gold — highlights/hovers */
-    --gold-dark:#8a6a1c;    /* deep gold — readable small text on white */
+    --gold-dark:#7c5d14;    /* deep gold — AA-readable small text on white */
     --accent:var(--gold);
     --accent-2:var(--gold-bright);
     --line:rgba(40,30,5,.12);
@@ -91,7 +96,7 @@
   /* MARQUEE */
   .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;white-space:nowrap;background:#f4efe4}
   .marquee-track{display:inline-block;animation:scroll 24s linear infinite}
-  .marquee span{font-family:'Anton',sans-serif;font-size:27px;letter-spacing:1px;text-transform:uppercase;color:#a9a293;padding:0 30px}
+  .marquee span{font-family:'Anton',sans-serif;font-size:27px;letter-spacing:1px;text-transform:uppercase;color:#837d6e;padding:0 30px}
   .marquee span .dot{color:var(--gold)}
   @keyframes scroll{to{transform:translateX(-50%)}}
 
@@ -488,18 +493,19 @@ const pkg={
  film:{name:'The Story',base:[3500,10000],unit:'/project',desc:'A flagship brand film, full strategy, and a library of cut-downs. The piece people remember you by.'},
  plan:{name:'The Game Plan',base:[300,1500],unit:'to start',desc:'A content audit and strategy — we tell you exactly what to make. Upgrade to production whenever you\'re ready.'}
 };
-let need='refresh';let addons={};
+let need='refresh';let who='business';let addons={};
+const whoNote={business:"We'll make your business look as good as it actually is.",gym:"Built to show your studio's energy and culture — the thing that signs members.",restaurant:"We'll make the food and the vibe impossible to scroll past.",athlete:"We'll tell the story behind the highlights — the kind that gets you remembered.",creator:"Production that finally matches your ideas."};
 function fmt(n){return '$'+n.toLocaleString()}
 function render(){const p=pkg[need];let lo=p.base[0],hi=p.base[1];let add=0;Object.keys(addons).forEach(k=>{if(addons[k])add+=+addons[k]});
  if(need!=='plan'){lo+=add;hi+=add}
  document.getElementById('recName').textContent=p.name;
  document.getElementById('recPrice').childNodes[0].nodeValue=fmt(lo)+'–'+fmt(hi);
  document.getElementById('recUnit').textContent=p.unit;
- document.getElementById('recDesc').textContent=p.desc;
+ document.getElementById('recDesc').textContent=p.desc+' '+(whoNote[who]||'');
 }
 document.querySelectorAll('.opts').forEach(g=>{const grp=g.dataset.group;g.querySelectorAll('.opt').forEach(o=>{o.addEventListener('click',()=>{
  if(grp==='addon'){o.classList.toggle('sel');addons[o.dataset.v]=o.classList.contains('sel')?o.dataset.add:0;}
- else{g.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));o.classList.add('sel');if(grp==='need')need=o.dataset.v;}
+ else{g.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));o.classList.add('sel');if(grp==='need')need=o.dataset.v;if(grp==='who')who=o.dataset.v;}
  render();
 })})});
 render();
